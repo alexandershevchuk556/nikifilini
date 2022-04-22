@@ -1,0 +1,22 @@
+extend type Query {
+    productStatuses: [ProductStatus]!
+    ordersStatuses: [OrderStatus]!
+    deliveryTypes: [DeliveryType]!
+}
+
+type DeliveryType {
+    code: String!
+    name: String!
+}
+
+type ProductStatus {
+    code: String!
+    name: String!
+}
+
+type OrderStatus {
+    id: Int
+    externalId: Int
+    status: String
+    group: String
+}
